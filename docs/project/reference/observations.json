@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "reference": {
+    "product": "Microsoft Project Standard 2024",
+    "version": "16.0.20326.20142",
+    "os": "Microsoft Windows 11 Pro build 26200",
+    "locale": "en-US"
+  },
+  "observations": [
+    {
+      "id": "MP-BUILD-001",
+      "category": "build",
+      "priority": "P0",
+      "preconditions": ["Windows installation metadata and Project executable are available."],
+      "steps": [
+        "Read Office Click-to-Run configuration registry values.",
+        "Read Project uninstall registration.",
+        "Read WINPROJ.EXE ProductVersion and FileVersion.",
+        "Read operating-system version and current process culture."
+      ],
+      "observations": [
+        "ProjectStd2024Retail is present in ProductReleaseIds.",
+        "The Project display name is Microsoft Project - en-us and the running window title is Project Standard.",
+        "Office platform is x64 and the reported version is 16.0.20326.20142.",
+        "Windows reports Windows 11 Pro version 10.0.26200, build 26200.",
+        "The current culture is en-US with short date M/d/yyyy, short time h:mm tt, and currency symbol $."
+      ],
+      "persistedState": [],
+      "errors": [],
+      "undoRedo": [],
+      "screenshots": [],
+      "fixtures": [],
+      "confidence": "observed",
+      "unresolvedQuestions": [
+        "The About dialog's displayed version/build has not been independently captured.",
+        "Project-specific regional overrides and add-in enabled states are unknown."
+      ],
+      "evidence": ["build.json"]
+    },
+    {
+      "id": "MP-UI-001",
+      "category": "ui",
+      "priority": "P0",
+      "preconditions": ["Microsoft Project Standard 2024 is installed and launches."],
+      "steps": [
+        "Start a blank Project from the application's New page.",
+        "Capture the native Project window at 1936x1048."
+      ],
+      "observations": [
+        "The fresh blank project opens in a ribbon-based desktop window titled Project1 - Project Standard.",
+        "The workspace contains a task table on the left, a Gantt timescale/chart region on the right, and a separate timeline strip above them.",
+        "The captured ribbon tabs include Task, Resource, Report, Project, View, Help, and contextual Gantt Chart Format.",
+        "The main view was labeled Gantt Chart."
+      ],
+      "persistedState": ["The blank project title was Project1; no save/reopen was performed."],
+      "errors": [],
+      "undoRedo": [],
+      "screenshots": ["screenshots/MP-UI-001.png"],
+      "fixtures": [],
+      "confidence": "observed",
+      "unresolvedQuestions": [
+        "Window resizing and alternate display scaling have not been compared.",
+        "Ribbon control enablement and command outcomes have not been exhaustively activated."
+      ],
+      "evidence": ["screenshots/MP-UI-001.png"]
+    },
+    {
+      "id": "MP-UI-002",
+      "category": "ui",
+      "priority": "P0",
+      "preconditions": ["Fresh Project1 blank project is open in Gantt Chart."],
+      "steps": ["Inspect the visible task table, ribbon, timeline, and status bar."],
+      "observations": [
+        "Visible task-table columns are Task Mode, Task Name, Duration, Start, Finish, Predecessors, Resource Names, and Add New Column.",
+        "The timeline strip displays Start and Finish endpoints and the empty-state prompt Add tasks with dates to the timeline.",
+        "The Task ribbon visibly groups View, Clipboard, Font, Schedule, Tasks, Insert, Properties, and Editing commands.",
+        "The status bar reports New Tasks: Manually Scheduled in this captured workspace.",
+        "Status-bar view shortcuts include Gantt Chart, Task Usage, Team Planner, Resource Sheet, and Blank Report; a zoom slider is also visible."
+      ],
+      "persistedState": ["No project mutation was made for this observation."],
+      "errors": [],
+      "undoRedo": [],
+      "screenshots": ["screenshots/MP-UI-001.png"],
+      "fixtures": [],
+      "confidence": "observed",
+      "unresolvedQuestions": [
+        "Each listed button's enabled state, exact action, and persistence have not been tested.",
+        "Other ribbon tabs, views, menus, context menus, and dialogs remain uninspected."
+      ],
+      "evidence": ["evidence/MP-UI-002-controls.txt"]
+    },
+    {
+      "id": "MP-CAL-001",
+      "category": "calendar",
+      "priority": "P0",
+      "preconditions": [
+        "A fresh Project1 was created through a local Project automation session.",
+        "The captured project reported Calendar.Name = Standard."
+      ],
+      "steps": ["Read the new project's calendar weekday Working flags."],
+      "observations": [
+        "Sunday and Saturday reported Working=False.",
+        "Monday, Tuesday, Wednesday, Thursday, and Friday reported Working=True.",
+        "The probe did not establish shift start/end times."
+      ],
+      "persistedState": ["No project file was saved."],
+      "errors": [],
+      "undoRedo": [],
+      "screenshots": [],
+      "fixtures": [],
+      "confidence": "observed",
+      "unresolvedQuestions": [
+        "Working shifts, exceptions, holidays, elapsed durations, and date boundary behavior are unknown.",
+        "The automation snapshot used the environment date 2026-10-02; this is not evidence of a fixed default project start date."
+      ],
+      "evidence": ["evidence/MP-CAL-001-weekdays.txt"]
+    }
+  ]
+}

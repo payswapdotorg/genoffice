@@ -1,0 +1,35 @@
+Observation ID: MP-UI-002
+State: Blank Project1 in Gantt Chart; 1936x1048 window capture
+Source: Native screenshot plus sanitized UI Automation tree summary
+
+Ribbon tabs observed:
+Task, Resource, Report, Project, View, Help, Gantt Chart Format (contextual)
+
+Task ribbon group labels observed:
+View, Clipboard, Font, Schedule, Tasks, Insert, Properties, Editing
+
+Visible task-table column labels:
+Task Mode, Task Name, Duration, Start, Finish, Predecessors, Resource Names,
+Add New Column
+
+Visible Task ribbon controls include:
+Gantt Chart; Paste; Cut; Copy; Format Painter; Font/Font Size; Bold; Italic;
+Underline; Background Color; Font Color; 0%, 25%, 50%, 75%, and 100% Complete;
+Outdent; Indent; Split Task; Link Tasks; Unlink Tasks; Mark on Track;
+Respect Links; Manually Schedule; Auto Schedule; Inspect; Move; Mode; Task;
+Summary; Milestone; Information; Notes; Details; Add to Timeline; Scroll to
+Task; Find; Clear; Fill.
+
+Timeline:
+Start and Finish endpoints and the empty-state prompt "Add tasks with dates to
+the timeline" are visible.
+
+Status bar:
+"New Tasks: Manually Scheduled" is visible in this captured state. View
+shortcuts include Gantt Chart, Task Usage, Team Planner, Resource Sheet, and
+Blank Report. A zoom slider and zoom controls are visible.
+
+Limits:
+This is a label/control inventory only. Command activation, enabled state,
+prerequisites, mutation, persistence, dialogs, errors, and undo behavior have
+not been established.

@@ -1,0 +1,43 @@
+{
+  "product": "Microsoft Project",
+  "edition": "Project Standard 2024",
+  "version": "16.0.20326.20142",
+  "build": "16.0.20326.20142",
+  "architecture": "x64",
+  "os": "Microsoft Windows 11 Pro, version 10.0.26200, build 26200",
+  "installationType": "Office Click-to-Run",
+  "locale": "en-US",
+  "dateFormat": "M/d/yyyy",
+  "timeFormat": "h:mm tt",
+  "currency": "$",
+  "addonsObserved": [
+    {
+      "name": "Microsoft Teams Meeting Add-in for Microsoft Office",
+      "version": "1.24.25506",
+      "evidence": "Windows installed-program inventory; presence does not establish Project integration or enabled state."
+    }
+  ],
+  "configurationNotes": [
+    "Office Click-to-Run ProductReleaseIds included ProjectStd2024Retail, O365HomePremRetail, and O365ProPlusRetail.",
+    "The edition is established by the ProjectStd2024Retail product ID and the Project Standard window title.",
+    "No Project add-in enabled-state inventory or non-default Project Options comparison has been completed."
+  ],
+  "evidence": [
+    {
+      "id": "MP-BUILD-001",
+      "sources": [
+        "HKLM Office ClickToRun Configuration: VersionToReport, Platform, ClientCulture, ProductReleaseIds",
+        "WINPROJ.EXE ProductVersion and FileVersion",
+        "Windows uninstall registration DisplayName and DisplayVersion",
+        "Win32_OperatingSystem Caption, Version, and BuildNumber",
+        "CurrentCulture date/time/currency formatting"
+      ],
+      "captureDate": "2026-10-02",
+      "limitations": [
+        "No About dialog screenshot was captured.",
+        "Locale fields describe the current Windows process culture; Project-specific overrides have not been ruled out.",
+        "The registry reports installed products, not activation or license entitlement."
+      ]
+    }
+  ]
+}

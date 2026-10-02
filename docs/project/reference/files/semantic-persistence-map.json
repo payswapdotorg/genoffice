@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "formatsObserved": [],
+  "semanticMappings": [],
+  "status": "not-investigated",
+  "notes": [
+    "No save/open/export or differential file experiment has been verified.",
+    "Do not assume .mpp, XML, or any interchange format behavior until exposed UI actions and round trips are tested."
+  ]
+}

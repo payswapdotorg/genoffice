@@ -1,0 +1,18 @@
+Observation ID: MP-CAL-001
+Project: Project1 created in the captured local automation session
+Calendar.Name: Standard
+Capture date: 2026-10-02
+
+Weekday Working flags:
+Sunday=False
+Monday=True
+Tuesday=True
+Wednesday=True
+Thursday=True
+Friday=True
+Saturday=False
+
+The same snapshot reported ProjectStart=10/02/2026 08:00:00 and
+DefaultTaskType=pjFixedUnits. The date is session-specific and is not evidence
+that a future blank project always starts on that date. Shift times were not
+established by this capture.

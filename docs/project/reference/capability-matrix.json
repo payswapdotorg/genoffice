@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "capabilities": [
+    {
+      "id": "MP-CAP-001",
+      "category": "build",
+      "capability": "Identify installed Project Standard 2024 build",
+      "priority": "P0",
+      "observed": true,
+      "status": "observed-working",
+      "evidence": ["MP-BUILD-001"],
+      "fixture": [],
+      "dependencies": [],
+      "notes": "Build and OS metadata are registry/executable observations; no About dialog capture."
+    },
+    {
+      "id": "MP-CAP-002",
+      "category": "project",
+      "capability": "Create and display a blank project",
+      "priority": "P0",
+      "observed": true,
+      "status": "observed-working",
+      "evidence": ["MP-UI-001"],
+      "fixture": [],
+      "dependencies": [],
+      "notes": "Observed the blank Project1 workspace; no save/reopen test."
+    },
+    {
+      "id": "MP-CAP-003",
+      "category": "view",
+      "capability": "Display Gantt Chart, task table, and timeline together",
+      "priority": "P0",
+      "observed": true,
+      "status": "observed-working",
+      "evidence": ["MP-UI-001", "MP-UI-002"],
+      "fixture": [],
+      "dependencies": [],
+      "notes": "Only the initial blank workspace and one viewport size have been recorded."
+    },
+    {
+      "id": "MP-CAP-004",
+      "category": "calendar",
+      "capability": "Expose Standard calendar weekday working flags",
+      "priority": "P0",
+      "observed": true,
+      "status": "observed-working",
+      "evidence": ["MP-CAL-001"],
+      "fixture": [],
+      "dependencies": [],
+      "notes": "Weekday working flags only; time shifts and actual schedule calculations are untested."
+    },
+    {
+      "id": "MP-CAP-005",
+      "category": "task-editing",
+      "capability": "Create, edit, delete, and reorder tasks through the UI",
+      "priority": "P0",
+      "observed": false,
+      "status": "not-tested",
+      "evidence": [],
+      "fixture": [],
+      "dependencies": [],
+      "notes": "Visible controls do not establish their task-editing behavior."
+    },
+    {
+      "id": "MP-CAP-006",
+      "category": "hierarchy",
+      "capability": "Create and calculate summary tasks and nested hierarchy",
+      "priority": "P0",
+      "observed": false,
+      "status": "not-tested",
+      "evidence": [],
+      "fixture": [],
+      "dependencies": [],
+      "notes": "Indent/Outdent labels are visible, but behavior and rollups are untested."
+    },
+    {
+      "id": "MP-CAP-007",
+      "category": "scheduling",
+      "capability": "Schedule dependency relationships, lag, and lead",
+      "priority": "P0",
+      "observed": false,
+      "status": "not-tested",
+      "evidence": [],
+      "fixture": [],
+      "dependencies": [],
+      "notes": "No controlled native schedule experiment has been recorded."
+    },
+    {
+      "id": "MP-CAP-008",
+      "category": "files",
+      "capability": "Open, save, export, and round-trip project files",
+      "priority": "P0",
+      "observed": false,
+      "status": "not-tested",
+      "evidence": [],
+      "fixture": [],
+      "dependencies": [],
+      "notes": "The supported format matrix and persistence contract remain unknown."
+    },
+    {
+      "id": "MP-CAP-009",
+      "category": "resources",
+      "capability": "Define resources, assign them, and observe schedule/cost effects",
+      "priority": "P1",
+      "observed": false,
+      "status": "not-tested",
+      "evidence": [],
+      "fixture": [],
+      "dependencies": [],
+      "notes": "Resource ribbon tab presence is not behavior evidence."
+    },
+    {
+      "id": "MP-CAP-010",
+      "category": "tracking",
+      "capability": "Baselines, progress, actuals, and variance behavior",
+      "priority": "P1",
+      "observed": false,
+      "status": "not-tested",
+      "evidence": [],
+      "fixture": [],
+      "dependencies": [],
+      "notes": "Visible completion buttons do not establish data or recalculation semantics."
+    },
+    {
+      "id": "MP-CAP-011",
+      "category": "interaction",
+      "capability": "Undo/redo, keyboard navigation, and error behavior",
+      "priority": "P0",
+      "observed": false,
+      "status": "not-tested",
+      "evidence": [],
+      "fixture": [],
+      "dependencies": [],
+      "notes": "Quick Access undo/redo controls are visible; operation semantics are unknown."
+    }
+  ]
+}
